@@ -93,7 +93,7 @@ sns.despine(f2, left=True, bottom=True)
 cut_ranking = ["Fair", "Good", "Very Good", "Premium", "Ideal"]
 fig3 = sns.scatterplot(data=diamonddata,
             x="carat", y="price",
-            palette="light:#5A9",
+            palette="dark:#5A9",
             hue="cut", size="depth",
             hue_order=cut_ranking,
             sizes=(1, 5))
