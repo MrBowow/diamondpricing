@@ -11,7 +11,7 @@ diamonddata = pd.read_csv("diamonds_regression.csv")
 diamdata = diamonddata.drop(columns = ['Unnamed: 0'])
 
 if st.sidebar.checkbox('Show DataFrame'):
-       st.write(diamodata.head(20))
+       st.write(diamdata.head(20))
 
 st.title('Diamond Pricing App')
 st.write("""From the Data below we built a machine learning-based pricing model 
