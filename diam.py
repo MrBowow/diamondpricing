@@ -8,10 +8,10 @@ sns.set_theme(style="whitegrid")
 
 
 diamonddata = pd.read_csv("diamonds_regression.csv")
-diamonddata.drop(columns = ['Unnamed: 0'])
+diamdata = diamonddata.drop(columns = ['Unnamed: 0'])
 
 if st.sidebar.checkbox('Show DataFrame'):
-       st.write(diamonddata.head(20))
+       st.write(diamodata.head(20))
 
 st.title('Diamond Pricing App')
 st.write("""From the Data below we built a machine learning-based pricing model 
