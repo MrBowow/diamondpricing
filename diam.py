@@ -98,8 +98,8 @@ fig3 = sns.scatterplot(data=diamonddata,
             hue_order=cut_ranking,
             sizes=(1, 5))
 
-plt.setp(f.get_legend().get_texts(), fontsize='8') 
-plt.setp(f3.get_legend().get_texts(), fontsize='8') 
+plt.setp(fig2.get_legend().get_texts(), fontsize='8') 
+plt.setp(fig3.get_legend().get_texts(), fontsize='8') 
 
 st.pyplot(fig1)
 st.pyplot(f)
