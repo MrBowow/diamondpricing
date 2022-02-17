@@ -8,7 +8,7 @@ sns.set_theme(style="whitegrid")
 
 
 diamonddata = pd.read_csv("diamonds_regression.csv")
-diamdata = diamonddata.drop(columns = ['Unnamed: 0'])
+diamdata = diamonddata.drop(columns = ['Unnamed: 0', 'x','y','z'])
 
 if st.sidebar.checkbox('Show DataFrame'):
        st.write(diamdata.head(20))
