@@ -29,35 +29,35 @@ y = st.sidebar.slider('Y', 0.00, 60.00, 1.00)
 z = st.sidebar.slider('Z', 0.00, 32.00, 1.00)
 
     
-cut = st.sidebar.selectbox("Cut",['cut_Fair', 'cut_Good', 'cut_Ideal', 'cut_Premium', 'cut_Very Good'])
+cut = st.sidebar.selectbox("Cut",['Fair', 'Good', 'Ideal', 'Premium', 'Very Good'])
 
-if cut == 'cut_Fair':
+if cut == 'Fair':
     cut_list = [1, 0, 0, 0,0]
-elif cut == 'cut_Good':
+elif cut == 'Good':
     cut_list = [0, 1, 0, 0,0]
-elif cut == 'cut_Ideal':
+elif cut == 'Ideal':
     cut_list = [0, 0, 1, 0,0]
-elif cut == 'cut_Premium':
+elif cut == 'Premium':
     cut_list = [0, 0, 0, 1,0]
-elif cut == 'cut_Very Good':
+elif cut == 'Very Good':
     cut_list = [0, 0, 0,0,1]
     
-color = st.sidebar.selectbox("Color",['color_D', 'color_E', 'color_F', 'color_G', 'color_H', 'color_I',
-       'color_J'])
+color = st.sidebar.selectbox("Color",['D', 'E', 'cF', 'cG', 'H', 'I',
+       'J'])
     
-if color == 'color_D':
+if color == 'D':
     col_list = [1, 0, 0, 0,0,0,0]
-elif color == 'color_E':
+elif color == 'E':
     col_list = [0, 1, 0, 0,0,0,0]
-elif color == 'color_F':
+elif color == 'F':
     col_list = [0, 0, 1, 0,0,0,0]
-elif color == 'color_G':
+elif color == 'G':
     col_list = [0, 0, 0, 1,0,0,0]
-elif color == 'color_H':
+elif color == 'H':
     col_list = [0, 0, 0,0,1,0,0]
-elif color == 'color_I':
+elif color == 'I':
     col_list = [0, 0, 0,0,0,1,0]
-elif color == 'color_J':
+elif color == 'J':
     col_list = [0, 0, 0,0,0,0,1]
                                          
 st.subheader("Output Diamond Price")
@@ -93,7 +93,7 @@ sns.despine(f2, left=True, bottom=True)
 cut_ranking = ["Fair", "Good", "Very Good", "Premium", "Ideal"]
 fig3 = sns.scatterplot(data=diamonddata,
             x="carat", y="price",
-            palette="flare",
+            palette="light:#5A9",
             hue="cut", size="depth",
             hue_order=cut_ranking,
             sizes=(1, 5))
